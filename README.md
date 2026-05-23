@@ -7,7 +7,7 @@ Desarrollo de una tienda virtual funcional desde consola donde el cliente puede 
 
 ### Strategy (Descuentos)
 - Interfaz `DiscountStrategy` con método `applyDiscount`.
-- Estrategias concretas: `NoDiscount` (sin descuento), `PercentageDiscount` (descuento porcentual, ej. 10%), `FixedAmountDiscount` (descuento de monto fijo, ej. S/ 20).
+- Estrategias concretas: `NoDiscount` (sin descuento), `PercentageDiscount` (descuento porcentual, ej. 10%), `FixedAmountDiscount` (descuento de monto fijo, ej. S/20).
 - El carrito (`ShoppingCart`) puede cambiar de estrategia en tiempo de ejecución por composición.
 
 ### Adapter (Método de pago)
@@ -21,3 +21,10 @@ Desarrollo de una tienda virtual funcional desde consola donde el cliente puede 
 - Cuando se confirma la orden (`Order.confirm()`), se notifica automáticamente a todos los observadores registrados.
 
 ## Ejemplo de salida en consola
+Total sin descuento: S/ 1550.0
+Total con 10% descuento: S/ 1395.0
+ Pago realizado con PayPal: PEN 1395.0
+Compra confirmada por S/ 1395.0
+ Enviando correo al cliente: Compra confirmada por S/ 1395.0
+ Actualizando inventario: Compra confirmada por S/ 1395.0
+ Notificando al administrador: Compra confirmada por S/ 1395.0
